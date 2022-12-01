@@ -1,6 +1,7 @@
 package at.fhtw.Test.Controller;
 
 import at.fhtw.Test.Service.TestService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,10 +22,19 @@ public class TestController {
         return service.getSquare(number);
     }
 
-    /*@PostMapping("/square/{number}") //für weitere Features nur dieser Teil nötig
-    public Long getSquare(Long number)
+    @GetMapping("/summe")
+    public Long getSum()
     {
-        return service.getSquare(number);
-    }*/
+        return service.getSumme();
+    }
+
+    @PostMapping("/summe/{number}")
+    public Long addToSum(@PathVariable Long number)
+    {
+        service.addToSum(number);
+        return service.getSumme();
+    }
+
+
 
 }

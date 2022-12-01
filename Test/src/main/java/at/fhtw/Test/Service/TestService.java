@@ -5,15 +5,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestService {
 
+    private long sum = 0;
 
     public Long getSquare(long number)
     {
         return number*number;
     }
 
-    /*public Long getSquare(Long number) //für weitere Feature
+    public void addToSum(long summand)
     {
-        return number*number;
-    }*/
+        sum += summand;
+    }
+
+    public Long getSumme()
+    {
+        return sum;
+    }
+
 
 }

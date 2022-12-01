@@ -12,4 +12,23 @@ class TestServiceTest {
     void getSquare() {
         assertEquals(100,service.getSquare(10));
     }
+
+    @Test
+    void testSum()
+    {
+        service.addToSum(5);
+        assertEquals(5,service.getSumme());
+    }
+
+    @Test
+    void testMoreSum()
+    {
+        service.addToSum(10);
+        service.addToSum(25);
+        service.addToSum(-10);
+        assertEquals(25,service.getSumme());
+    }
+
+
+
 }
