@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>at.fhtw</groupId>
-	<artifactId>summenrechner</artifactId>
+	<artifactId>test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>summenrechner</name>
+	<name>test</name>
 	<description>Demo project for Spring Boot in SLM</description>
 	<properties>
 		<java.version>17</java.version>
